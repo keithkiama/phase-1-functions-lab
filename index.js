@@ -1,17 +1,18 @@
 // Code your solution in this file!
 const headquaters = 42;
 
-function distanceFromHqInBlocks(passengerlocation) {
-    if (passengerlocation > 42 ){
-        return (passengerlocation - headquaters);
+function distanceFromHqInBlocks(passengerLocation) {
+    if (passengerLocation > 42 ){
+        return (passengerLocation - headquaters);
     }
+    
     else{
-        return(headquaters - passengerlocation);
+        return(headquaters - passengerLocation);
     }
 }
 
-function distanceFromHqInFeet(passengerlocation){
-    const distanceTravelledInFeet = distanceFromHqInBlocks(passengerlocation);
+function distanceFromHqInFeet(passengerLocation){
+    const distanceTravelledInFeet = distanceFromHqInBlocks(passengerLocation);
     return distanceTravelledInFeet * 264;
 }
 
@@ -27,8 +28,8 @@ function distanceTravelledInFeet(distanceTravelledInFeet, distanceFromHqInBlocks
     return distance * 264;
 }
   
-function calculatesFarePrice(start,end){
-    const distance = distanceTravelledInFeet(start, end);
+function calculatesFarePrice(start,destination){
+    const distance = distanceTravelledInFeet(start, destination);
     let fare;
     if (distance <= 400) {
         return fare = 0;
